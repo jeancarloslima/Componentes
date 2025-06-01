@@ -4,7 +4,8 @@
     /* Cores */
     --cor-primaria: #1d3557;
     --cor-secundaria: #76c893;
-    --branco: #f1faee;
+    --cor-terciaria: #f1faee;
+    --branco: #FFF;
     --preto: #000;
     /* Fontes */
     --fonte-primaria: "Lato", sans-serif;
@@ -13,7 +14,7 @@
 
 body {
     background-color: var(--cor-primaria);
-    color: var(--branco);
+    color: var(--cor-terciaria);
     font-family: var(--fonte-primaria);
 }
 
@@ -46,9 +47,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--branco);
+    border: 1px solid var(--cor-terciaria);
     border-radius: 8px;
     position: relative;
+}
+
+#item-componente1 {
+    background-color: var(--branco);
 }
 
 .item-componente-contador {
@@ -58,4 +63,23 @@ main {
     transform: translateX(-50%);
     color: var(--cor-secundaria);
     font-weight: 600;
+}
+
+#componente1 {
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 16px;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+#componente1:hover {
+    color: #FFF;
+    background-color: #76c893;
+    box-shadow: var(--cor-secundaria) 0px 3px 8px;
+    transform: translateY(-10px);
 }
