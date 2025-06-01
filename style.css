@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Parisienne&display=swap');
+
+:root {
+    /* Cores */
+    --cor-primaria: #1d3557;
+    --cor-secundaria: #76c893;
+    --branco: #f1faee;
+    --preto: #000;
+    /* Fontes */
+    --fonte-primaria: "Lato", sans-serif;
+    --fonte-secundaria: "Parisienne", cursive;
+}
+
+body {
+    background-color: var(--cor-primaria);
+    color: var(--branco);
+    font-family: var(--fonte-primaria);
+}
+
+header {
+    padding: 2rem 1rem;
+}
+
+h1 {
+    font-size: 5rem;
+    font-family: var(--fonte-secundaria);
+    text-align: center;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#lista-componentes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.item-componente {
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--branco);
+    border-radius: 8px;
+    position: relative;
+}
+
+.item-componente-contador {
+    position: absolute;
+    left: 50%;
+    top: 7px;
+    transform: translateX(-50%);
+    color: var(--cor-secundaria);
+    font-weight: 600;
+}
