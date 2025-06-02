@@ -73,7 +73,8 @@ main {
     position: relative;
 }
 
-#item-componente1 {
+#item-componente1,
+#item-componente2 {
     background-color: var(--branco);
 }
 
@@ -103,4 +104,23 @@ main {
     background-color: #76c893;
     box-shadow: var(--cor-secundaria) 0px 3px 8px;
     transform: translateY(-10px);
+}
+
+#componente2 {
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e63946;
+    color: var(--branco);
+    outline: none;
+    box-shadow: #96252f 0px 7px 2px, #000 0px 8px 5px;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+#componente2:active {
+    box-shadow: #96252f 0px 3px 2px,#000 0px 3px 5px;
+    transform: translateY(5px);
 }
