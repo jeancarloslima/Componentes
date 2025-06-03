@@ -75,7 +75,8 @@ main {
 }
 
 #item-componente1,
-#item-componente2 {
+#item-componente2,
+#item-componente3 {
     background-color: var(--branco);
 }
 
@@ -124,4 +125,75 @@ main {
 #componente2:active {
     box-shadow: #96252f 0px 3px 2px,#000 0px 3px 5px;
     transform: translateY(5px);
+}
+
+#item-componente3 .linha-de-progresso {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+#item-componente3 .linha-de-progresso .etapa {
+    width: 30px;
+    height: 30px;
+    background-color: #a5a0a0;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    position: relative;
+}
+
+#item-componente3 .linha-de-progresso .etapa i {
+    display: none;
+}
+
+#item-componente3 .linha-de-progresso .etapa span {
+    position: absolute;
+    color: #7a7979;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 600;
+}
+
+#item-componente3 .linha-de-progresso .etapa.concluida span,
+#item-componente3 .linha-de-progresso .etapa.atual span {
+    color: #76c893;
+}
+
+#item-componente3 .linha-de-progresso .etapa.concluida {
+    background-color: #76c893;
+}
+
+#item-componente3 .linha-de-progresso .etapa.concluida i {
+    display: inline;
+}
+
+#item-componente3 .linha-de-progresso .etapa.atual {
+    border: 2px solid #76c893;
+    background-color: transparent;
+}
+
+#etapa1::before,
+#etapa2::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #7a7979;
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#etapa1.concluida::before,
+#etapa2.concluida::before {
+    background-color: #76c893;
+}
+
+#etapa1.atual::before,
+#etapa2.atual::before {
+    right: -52px;
 }
